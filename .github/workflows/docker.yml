@@ -19,4 +19,4 @@ jobs:
        context: .
        file: ./Dockerfile
        push: true
-       tags: ${{ secrets.DOCKER_HUB_USER }}/my-image0.10:latest
+       tags: user/my-image0.10:latest
