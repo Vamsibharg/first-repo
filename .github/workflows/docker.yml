@@ -20,4 +20,7 @@ jobs:
         install: true
     - name: Build the Docker image
       run: |
-          docker build .
+          docker build . 
+    - run: |
+          Dockerfile
+      
