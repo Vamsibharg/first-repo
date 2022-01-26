@@ -1,2 +1,2 @@
 FROM ubuntu
-CMD ["echo", "Hello-world"]
+RUN ["echo", "Hello-world"]
