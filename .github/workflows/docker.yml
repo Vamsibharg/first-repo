@@ -22,5 +22,5 @@ jobs:
       run: |
           docker build . 
     - run: |
-          Dockerfile
+          Dockerfile .
       
