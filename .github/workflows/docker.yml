@@ -20,7 +20,7 @@ jobs:
         install: true
     - name: Build the Docker image
       run: |
-          docker build . 
+          docker build . --file Dockerfile --tag image1.01:$(date +%s)
     - name: Docker push
       run: docker push ${{secrets.DOCKER_USER}}/newtask1
       
