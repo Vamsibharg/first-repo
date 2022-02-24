@@ -27,4 +27,29 @@ jobs:
             path: target   
       - name: Run tests with Maven
         run: mvn -B test --file pom.xml
+ 
+  notify-on-email:
+   runs-on: windows-latest
+   if: always()
+   needs: [build]
+   name: email notification
+   steps:
+     - name: end mail
+       uses: devellany/send-mail@v1.0.2
+       with:
+         server_address: smtp.gmail.com
+         server_port: 465
+         username: ${{secrets.MAIL_USERNAME}}
+         password: ${{secrets.MAIL_PASSWORD}}
+         subject: Github actions job result
+         body: Workflow statue of ${{github.repository}} build- ${{needs.build.result}}
+         to: vamsikrishnaprasad.n@gmail.com
+         from: Bhargavi
+         
+        
+        
+     
+    
+    
+        
   
