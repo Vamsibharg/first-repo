@@ -37,9 +37,9 @@ jobs:
      - name: end mail
        uses: devellany/send-mail@v1.0.2
        with:
-         server_address: smtp.gmail.com
-         server_port: 465
-         username: ${{secrets.MAIL_USERNAME}}
+         host: smtp.gmail.com
+         port: 465
+         account: ${{secrets.MAIL_USERNAME}}
          password: ${{secrets.MAIL_PASSWORD}}
          subject: Github actions job result
          body: Workflow statue of ${{github.repository}} build- ${{needs.build.result}}
