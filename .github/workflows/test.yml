@@ -35,7 +35,7 @@ jobs:
    name: email notification
    steps:
      - name: end mail
-       uses: devellany/send-mail@v1.0.2
+       uses: dawidd6/action-send-mail@v2
        with:
          host: smtp.gmail.com
          port: 465
@@ -43,9 +43,11 @@ jobs:
          password: ${{secrets.MAIL_PASSWORD}}
          subject: Github actions job result
          body: Workflow statue of ${{github.repository}} build- ${{needs.build.result}}
-         to: vamsikrishnaprasad.n@gmail.com
+         to: bhargavi.ramachandruni@gmail.com
          from: Bhargavi
          sender: Bhargavi
+         content_type: text
+         
          
         
         
