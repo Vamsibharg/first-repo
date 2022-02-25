@@ -45,7 +45,7 @@ jobs:
          body: Workflow statue of ${{github.repository}} build- ${{needs.build.result}}
          to: bhargavi.ramachandruni@gmail.com
          from: Bhargavi
-         sender: Bhargavi
+
         
          
          
